@@ -124,7 +124,7 @@ export default defineComponent({
         email: '',
         first_name: '',
         last_name: '',
-        avatar: ''
+        avatar: '',
       } as User
     })
     const loadUsersServer = () => {
