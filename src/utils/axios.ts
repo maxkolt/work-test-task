@@ -4,7 +4,7 @@ const baseURL = 'https://reqres.in/api/users?page=2'
 
 const axios: AxiosInstance = Axios.create({
   baseURL,
-  timeout: 20000
+  timeout: 0
 })
 
 axios.interceptors.request.use(
