@@ -33,19 +33,9 @@ export default defineComponent({
           path: '/'
         },
         {
-          name: 'Vuex',
-          isActive: false,
-          path: '/vuex'
-        },
-        {
           name: 'Axios',
           isActive: false,
           path: '/axios'
-        },
-        {
-          name: 'Test',
-          isActive: false,
-          path: '/test'
         }
       ],
 

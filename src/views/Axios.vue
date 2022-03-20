@@ -36,18 +36,14 @@
         :key="user"
       >
         <el-card class="card" shadow="hoover">
-          <img
-            :src="user.avatar"
-            class="image"
-            :data="user.id"
-            @click.prevent="showUserDetails"
-          />
+          <img :src="user.avatar" class="image" :data="user.id" @click.prevent="showUserDetails" alt="img"/>
           <div>
             <div class="bottom">
               <div class="email">{{ user.email }}</div>
             </div>
           </div>
         </el-card>
+
       </el-col>
     </el-row>
     <el-dialog
@@ -61,7 +57,7 @@
         <div v-if="!dialogEditable">
           <el-row :gutter="20">
             <el-col :span="6">
-              <img v-if="!dialogEditable" :src="selectedUser.avatar" class="image" />
+              <img v-if="!dialogEditable" :src="selectedUser.avatar" class="image" alt="img"/>
             </el-col>
             <el-col :span="18">
               <h2>{{ selectedUser.first_name }} {{ selectedUser.last_name }}</h2>
@@ -119,9 +115,9 @@ export default defineComponent({
   name: 'Axios',
   setup() {
     const data = reactive({
-      usersLoadingStarted: false as Boolean,
-      dialogVisible: false as Boolean,
-      dialogEditable: false as Boolean,
+      usersLoadingStarted: false,
+      dialogVisible: false,
+      dialogEditable: false,
       users: [] as Array<User>,
       selectedUser: {
         id: -1,
